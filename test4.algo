@@ -1,0 +1,18 @@
+/* print the opening hour for a zoo
+according to season */
+// 1 it is winter / 2 it is spring / 3 it is summer / 4 it is autumn
+
+SWITCH (x) DO
+    case 1 : write("10h00 to 16h00"); BREAK;
+    case 2 : write("10h00 to 18h00"); BREAK;
+    case 3 : write("10h00 to 20h00"); BREAK;
+    case 4 : write("10h00 to 16h00"); BREAK;
+    default : write("wrong number");
+END_SWITCH
+//2sd version
+SWITCH (x) DO
+    case 1 : write("10h00 to 16h00"); BREAK;
+    case 2 : write("10h00 to 18h00"); BREAK;
+    case 3 : write("10h00 to 20h00"); BREAK;
+    default : write("wrong number");
+END_SWITCH

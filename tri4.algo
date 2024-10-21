@@ -1,0 +1,71 @@
+PROCEDURE merge(VAR arr : ARRAY_OF INTEGER, left, mid, right : INTEGER)
+
+VAR
+
+   i,j,k : INTEGER ;
+
+   n1 : INTEGER := mid - left + 1 ;
+
+   n2 : INTEGER := droite - milieu ;
+
+   L : ARRAY_OF INTEGER[n1] ;
+
+   R : ARRAY_OF INTEGER[n2] ;
+
+BEGIN
+
+   // copie des données dans les tableaux temporaires L[] et R[]
+
+  FOR i FROM 0 TO n1-1 DO
+
+      L[i] := arr[left+i] ;
+
+  END_FOR
+
+  FOR j FROM 0 TO n2-1 DO
+
+      R[j] := arr[mid+1+j] ;
+
+  END_FOR
+
+  // Fusionner les tableaux temporaires dans arr[left .. right]
+
+  i := 0 ;
+
+  j := 0 ;
+
+  k := gauche ;
+
+  WHILE (i<n1 AND j<n2) DO
+
+      SI (L[i] <= R[j]) ALORS
+
+          arr[k] := L[i] ;
+
+          i := i+1 ;
+
+       ELSE
+
+          arr[k] := R[j] ;
+
+          j := j+1 ;
+
+      END_IF
+
+      k := k+1 ;
+
+  END_WHILE
+
+  /* Copie des éléments restants de R[], s'il y en a */
+
+  WHILE (j < ; n2) DO
+
+      arr[k] := R[j] ;
+
+      j := j+1 ;
+
+      k := k+1 ;
+
+  END_WHILE
+
+END

@@ -1,0 +1,23 @@
+/*ticket of the bus ask how old are you IF
+you are under 16, then pay half ticket
+ELSE pay ful ticket
+*/
+ticket_price := 20;
+IF (age <= 16) THEN
+    ticket_price := 20;
+END_IF
+
+/// other way
+IF (age <= 16) THEN
+    sticket_price := 10;
+ELSE
+    ticket_price := 20;
+END_IF
+
+IF (age <= 16) THEN
+    ticket_price := 5;
+ELSE_IF (age <= 16) THEN
+    ticket_price := 10;
+ELSE
+    ticket_price := 20;
+END_IF

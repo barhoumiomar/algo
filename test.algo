@@ -1,0 +1,17 @@
+ALGORITHM types
+VAR
+    i : INTEGER := 26;
+    f : FLOAT := 4.56;
+    c : CHAR := 'c';
+    s : STRING := "str";
+    b : BOOLEAN := TRUE;
+    INTEGER
+BEGIN
+    //this is comment
+    //numeric are compatible
+    f := i;//correct
+    i := f;//wrong
+    //you cannot mix types
+    f := c;//wrong
+    s := c;//also wrong
+END

@@ -1,0 +1,19 @@
+ALGORITHME iterative_repeat
+
+VAR
+
+age : INTEGER ;
+
+
+
+BEGIN
+
+ REPEAT
+
+     Read( age )
+
+ UNTIL ( age>=0 )
+
+ Ecriture( âge )
+
+END

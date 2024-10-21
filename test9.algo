@@ -1,0 +1,43 @@
+/* *** Calculer la somme *** */
+
+
+
+/* Dans cet exemple, nous allons
+
+calculer la somme des nombres de 1 à 10
+
+1 à 10 */
+
+ALGORITHM iterative_for
+
+VAR
+
+i : INTEGER ;
+
+sum : INTEGER := 0 ;
+
+  
+
+DÉMARRER
+
+  
+
+FOR i FROM 1 TO 10 STEP step DO
+
+/*i represente la variable iterateur,
+
+le 1 représente le point de départ
+
+10 le point final
+
+step représente le pas de l'itération et est optionnel
+
+si nous n'en mettons pas, le pas par défaut sera 1 */
+
+   sum := sum + i
+
+END_FOR
+
+   Write(sum)
+
+END

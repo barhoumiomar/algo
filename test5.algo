@@ -1,0 +1,86 @@
+/* *********** Billets de bus ******* */
+
+
+
+/*
+
+demandez votre âge
+
+SI vous avez moins de 16 ans, ALORS payez le demi-tarif
+
+ELSE payez le plein tarif
+
+*/
+
+// première solution
+
+ticket_price := 20 ;
+
+IF (age <=16) THEN
+
+   ticket_price := 10 ;
+
+END_IF
+
+
+
+// Deuxième solution
+
+SI (âge <= 16) ALORS
+
+   ticket_price := 10 ;
+
+ELSE
+
+   ticket_price := 20 ;
+
+END_IF
+
+//-----------------------------------------
+IF (age<=10) ALORS
+
+   prix_du_billet := 4 ;
+
+ELSE_IF (âge<=16) ALORS
+
+/* dans ce cas, nous ne spécifions pas si l'âge n'est pas inférieur à 10 ans
+
+car dans ce cas, il satisfera à la première condition
+
+et exécutera le premier bloc d'instructions */
+
+   ticket_price := 10 ;
+
+ELSE
+
+   ticket_price := 20 ;
+
+END_IF
+//---------------------------------------------------------------------
+/* **** Zoo time **** */
+
+/*
+
+1 se réfère à l'hiver
+
+2 se réfère au printemps
+
+3 se réfère à l'été
+
+4 se réfère à l'automne
+
+*/
+
+SWITCH (saison) DO
+
+   case 1 : Write("10h00 to 16h00" ;); BREAK ;
+
+   case 2 : Write("10h00 to 18h00" ;); BREAK ;
+
+   case 3 : Write("10h00 to 20h00" ;); BREAK ;
+
+   case 4 : Write("10h00 to 16h00" ;); BREAK ;
+
+   default : Write("Wrong number" ;) // utilisation optionnelle de BREAK ;
+
+END_SWITCH

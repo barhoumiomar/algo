@@ -1,0 +1,45 @@
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+
+VAR
+
+   tmp : INTEGER ;
+
+DÉMARRAGE
+
+  tmp := xp ;
+
+  xp := yp ;
+
+  yp := tmp ;
+
+FIN
+
+/* *** Tri à bulles *** */
+
+PROCEDURE bubble_sort(VAR tab : ARRAY_OF INTEGER)
+
+VAR
+
+   i,j,n : INTEGER ;
+
+BEGIN
+
+   n := tab.length ;
+
+   FOR i FROM 0 TO n- 1 STEP 1 DO
+
+       // Les i derniers éléments sont déjà en place
+
+       FOR j FROM 0 TO n-i-1 STEP 1 DO
+
+           SI (tab[j] > ; tab[j+1]) ALORS
+
+               swap(tab[j], tab[j+1])
+
+           END_IF
+
+       END_FOR
+
+   END_FOR
+
+END

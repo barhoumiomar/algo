@@ -1,0 +1,63 @@
+/*
+
+arr -> ; tableau à trier
+
+l-> ; indice de départ
+
+h-> ; indice de fin
+
+*/
+
+
+
+PROCEDURE quick_sort(VAR arr : ARRAY_OF INTEGER)
+
+VAR
+
+  // Création d'une pile auxiliaire
+
+  stack : STACK ;
+
+  p : INTEGER ;
+
+COMMENCER
+
+   // Insertion des valeurs initiales de l et h dans la pile
+
+   stack.push(l) ;
+
+   stack.push(h) ;
+
+   // continuer à sortir de la pile tant qu'elle n'est pas vide
+
+   WHILE (NOT stack.isEmpty()) DO
+
+       // retirer h et l
+
+       h := stack.pop() ;
+
+       l := stack.pop() ;
+
+       // placer l'élément pivot à sa position correcte
+
+       // dans un tableau trié
+
+       p := partition(arr,l,h) ;
+
+       // s'il y a des éléments sur le côté droit du pivot,
+
+       // pousser le côté droit dans la pile
+
+       SI (p+1 < ; h) ALORS
+
+           stack.push(p+1) ;
+
+           stack.push(h) ;
+
+       END_IF
+
+   END_WHILE
+
+
+
+END

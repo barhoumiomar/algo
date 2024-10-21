@@ -1,0 +1,51 @@
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+
+VAR
+
+   tmp : INTEGER ;
+
+DÉMARRAGE
+
+  tmp := xp ;
+
+  xp := yp ;
+
+  yp := tmp ;
+
+FIN
+
+/* *** selection sort *** */
+
+PROCEDURE selection_sort(VAR tab : ARRAY_OF INTEGER)
+
+VAR
+
+   i,j,min_idx,n : INTEGER ;
+
+BEGIN
+
+   n := tab.length ;
+
+   // un par un, déplacement de la limite du sous-réseau
+
+   FOR i FROM 0 TO n-2 STEP 1 DO
+
+       min_idx := i ;
+
+       FOR j FROM i TO n-i-2 STEP 1 DO
+
+           IF (tab[j]<tab[min_idx]) ALORS
+
+               min_idx := j ;
+
+           END_IF
+
+       END_FOR
+
+   // échanger l'élément minimal trouvé avec le premier élément
+
+   swap(arr[min_idx],arr[i])
+
+   END_FOR
+
+END

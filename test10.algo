@@ -1,0 +1,35 @@
+ALGORITHME iterative_while
+
+VAR
+
+count : INTEGER := 0 ;
+
+// n est le nombre à tester
+
+n : INTEGER ;
+
+  
+
+BEGIN
+
+ WHILE (n%2 = 0 ) DO
+
+ /* si la condition est vraie
+
+ l'instruction sera répétée jusqu'à ce que la condition soit fausse
+
+ jusqu'à ce que la condition soit fausse
+
+   */
+
+   n := n/2 ; // à chaque fois que l'on divise le nombre n par 2, et
+
+   count := count +1 ; // incrémente le nombre de 1
+
+
+
+ END_WHILE
+
+ Écriture(count)
+
+END

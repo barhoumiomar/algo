@@ -1,0 +1,11 @@
+SWITCH (n) DO
+
+    CASE 1 : // code à exécuter si n = 1 ;
+
+            BREAK ; // BREAK est utilisé pour sauter les autres cas
+
+    CASE 2 : // code à exécuter si n = 2 ;
+
+    DEFAULT : // code à exécuter si n ne correspond à aucun cas
+
+END_SWITCH

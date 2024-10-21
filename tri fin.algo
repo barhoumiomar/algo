@@ -1,0 +1,45 @@
+FUNCTION binary_search(arr : ARRAY_OF INTEGER) : INTEGER
+
+VAR
+
+   left, right, mid : INTEGER ;
+
+DÉMARRER
+
+   left := 0 ;
+
+   right := arr.length-1 ;
+
+   WHILE (left < ; right) DO
+
+       mid := left + (right - left)/2 ;
+
+       // vérifier si x est présent dans le milieu
+
+       SI (arr[mid] = x) ALORS
+
+           RETURN mid ;
+
+       END_IF
+
+       // si x est plus grand, ignorer la moitié gauche
+
+       IF (arr[mid] < ; x) ALORS
+
+           left := mid+1 ;
+
+       ELSE
+
+       // si x est plus petit, ignorer la moitié droite
+
+       right := mid-1 ;
+
+       END_IF
+
+   END_WHILE
+
+   // si nous sommes arrivés ici, c'est que l'élément n'est pas présent
+
+   RETURN -1 ;
+
+END
